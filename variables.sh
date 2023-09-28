@@ -3,7 +3,7 @@
 NUMBER=$1
 if [ $NUMBER -gt 10 ]
 then
-echo "$NUMBER IS GREATHER 10"
+echo "$NUMBER IS GREATER 10"
 else
-echo "$NUMBER IS NOT GREATHER THAN 10"
+echo "$NUMBER IS NOT GREATER THAN 10"
 fi

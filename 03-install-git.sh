@@ -1,5 +1,7 @@
 #!/bin/bash
-USERID=$( id -u )
+#our programme is to install mysql
+
+USERID=$(id -u)
 if[ $USERID -ne 0 ]
 then
 echo "error: Please run this script with root access"

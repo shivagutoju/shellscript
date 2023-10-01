@@ -7,3 +7,4 @@ echo "date:$DATE)
 echo "VARIABLE 1:$VAR2"
 echo "variable 1:$@"
 echo "number of variables:$#"
+fi

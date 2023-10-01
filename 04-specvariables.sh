@@ -1,4 +1,5 @@
 #!/bin/bash
+DATE=$(date +%F)
 VAR1=$1
 VAR2=$2
 script_name=$0

@@ -1,5 +1,5 @@
 #!/bin/bash
-LOGFILE=/tmp/scriptname-$DATE.log
+LOGFILE=/tmp/$script_name-$DATE.log
 DATE=$(date +%F)
 VAR1=$1
 VAR2=$2

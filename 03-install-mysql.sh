@@ -1,6 +1,6 @@
 #!/bin/bash
 #our programme is to install mysql
-DATE=$(date -u)
+DATE=$(date)
 USERID=$(id -u)
 
 if [ $USERID -ne 0 ]

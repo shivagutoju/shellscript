@@ -14,3 +14,12 @@ validate(){
     echo -e "$2 ... $G SUCESS $N"
     fi
 }
+
+USERID=$(id -u)
+if [ $USERID -ne 0 ]
+then
+echo "error:please fund this script with root access"
+exit1
+else
+echo "you are root user"
+fi

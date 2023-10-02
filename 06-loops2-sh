@@ -34,7 +34,7 @@ then
      validate $? "$i"
 
 else
-     echo -e "$Y $i is already installed $N"
+     echo -e "$R $i is already installed $N"
 fi
 #yum install $i -y
 done

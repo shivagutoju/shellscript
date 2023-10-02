@@ -15,7 +15,7 @@ then
      echo -e "$R ERROR:pls run this script with root user $N"
      exit 1
 fi
-validate(){
+VALIDATE(){
     if [ $1 -ne 0 ];
     then 
     echo -e "$R installing $2 .. FAILURE $N"
@@ -31,7 +31,7 @@ if [ $? -ne 0 ]
 then
      echo "$i is not installed, let's install it"
      yum install $i -y &>>$LOGFILE
-     validate $? "$i"
+     VALIDATE $? "$i"
 
 else
      echo -e "$R $i is already installed $N"

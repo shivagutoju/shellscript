@@ -22,4 +22,4 @@ while IFS= read line
 do
 echo "OUTPUT: $line"
 
-done >>> $DISK_USAGE
+done <<< $DISK_USAGE

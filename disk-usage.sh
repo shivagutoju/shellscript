@@ -25,7 +25,7 @@ do
 
 usage=$(echo $line | awk '{print $6}' | cut -d % -f1)
 #this command will give us parition
-partition=$echo $line | awk '{print $1}
+partition=$(echo $line | awk '{print $1}')
 # now you need to check wheter it is more than it is threshold or not
 if [ $usage -gt $DISK_USAGE_THRESHOLD ];
 then

@@ -30,7 +30,7 @@ partition=$(echo $line | awk '{print $1}')
 if [ $usage -gt $DISK_USAGE_THRESHOLD ];
 then
 #if you will give = then append will apply, second time also function will work
-messege+="HIGH DISK USAGE ON $partition: $usage"
+message+="HIGH DISK USAGE on $partition: $usage \n"
 fi
 done <<< $DISK_USAGE
 

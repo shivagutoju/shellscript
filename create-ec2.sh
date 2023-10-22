@@ -4,6 +4,7 @@ NAMES=("mongodb" "redis" "mysql" "rabbitmq" "catalogue" "user" "cart" "shipping"
 INSTANCE_TYPE=""
 IMAGE_ID=ami-03265a0778a880afb
 SECURITY_GROUP_ID=sg-07e1ea518d41fdfed
+DOMAIN_NAME=gshivadevops.online
 
 #if mysql or mongodb instance_type should be t3.medium, for all others t2.micro
 
@@ -23,5 +24,20 @@ then
 
 
     done 
+
+    $ aws route53 change-resource-record-sets --hosted-zone-id Z05684162U49B9NYH4WVI --change-batch  '
+    {
+            "Comment": "CREATE/DELETE/UPSERT a record ",
+            "Changes": [{
+            "Action": "CREATE",
+                        "ResourceRecordSet": {
+                                    "Name": "'$i.$DOMAIN_NAME'",
+                                    "Type": "A",
+                                    "TTL": 300,
+                                 "ResourceRecords": [{ "Value": "'$IP_ADDRESS'"}]
+}}]
+}
+'
+done
 
 

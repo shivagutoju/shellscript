@@ -18,8 +18,8 @@ then
      INSTANCE_TYPE="t2.micro"
      fi
     echo "creating $i instance"
-    IP_ADDRESS=$(aws ec2 run-instances --image-id $IMAGE_ID --instance-type $INSTANCE_TYPE
-      --security-group-ids $SECURITY_GROUP_ID --tag-specifications "ResourceType=instance,Tags=[{Key=Name,Value=$i}]" | jq -r '.Instances[0].PrivateIpaddress')
+    IP_ADDRESS=$(aws ec2 run-instances --image-id $IMAGE_ID --instance-type $INSTANCE_TYPE --security-group-ids 
+    $SECURITY_GROUP_ID --tag-specifications "ResourceType=instance,Tags=[{Key=Name,Value=$i}]" | jq -r '.Instances[0].PrivateIpaddress')
     echo "created $i instance: $IP_ADDRESS"
 
 
@@ -34,7 +34,7 @@ then
                                     "Type": "A",
                                     "TTL": 300,
                                  "ResourceRecords": [{ "Value": "'$IP_ADDRESS'"}]
-}}]
+                         }}]
 }
 '
 done

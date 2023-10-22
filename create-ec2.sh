@@ -26,7 +26,8 @@ then
 
      aws route53 change-resource-record-sets --hosted-zone-id Z05684162U49B9NYH4WVI --change-batch  '
     {
-            
+          
+            "Changes": [{
             "Action": "CREATE",
                         "ResourceRecordSet": {
                                     "Name": "'$i.$DOMAIN_NAME'",

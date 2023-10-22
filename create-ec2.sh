@@ -2,7 +2,7 @@
 
 NAMES=("mongodb" "redis" "mysql" "rabbitmq" "catalogue" "user" "cart" "shipping" "payment" "dispatch" "web")
 INSTANCE_TYPE=""
-IMAGE_ID=ami-03265a0778a880afb
+IMAGE_ID=
 SECURITY_GROUP_ID=sg-07e1ea518d41fdfed
 DOMAIN_NAME=gshivadevops.online
 
